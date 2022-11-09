@@ -34,17 +34,20 @@ Host, emby.texon.one, Emby
 HOST, emby.wtf, Emby
 
 # PeachEmby
-HOST, embymv.tk, Emby
-HOST, blueseacdn.com, Emby
+HOST-KEYWORD, embymv.tk, Emby
 
 # Polo
 HOST, poloemby.xyz, Emby
 
 #二次元
-HOST, nijigem.by, Emby
+HOST-KEYWORD, nijigem.by, Emby
 
 #Catfish
 HOST, catfishemby.club, Emby
+
+#Bluesea
+HOST-KEYWORD, blueseacdn.com, Emby
+
 
 
 
