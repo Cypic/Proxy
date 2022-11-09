@@ -19,13 +19,13 @@ HOST, emby.wtf, Emby
 HOST, emby.kim, Emby
 
 # Misty
-HOST, aaa.ax, Emby
+HOST-KEYWORD, aaa.ax, Emby
 
 # 品云
 HOST, embyplus.club, Emby
 
 # misakaf
-HOST, cf.misakaf.org, Emby
+HOST-KEYWORD, cf.misakaf.org, Emby
 
 # Texon
 Host, emby.texon.one, Emby
