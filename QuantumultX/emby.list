@@ -10,7 +10,7 @@ HOST, emby.52.al, Emby
 HOST, cc.ccemby.tk, Emby
 
 # 卷毛鼠
-HOST, jmsooo.com, Emby
+HOST-KEYWORD, jmsooo.com, Emby
 
 # 终点
 HOST, emby.wtf, Emby
