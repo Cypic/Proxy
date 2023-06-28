@@ -1,53 +1,58 @@
 # NAME: Emby
-# AUTHOR: Cypic
 # 关键字匹配
-HOST-KEYWORD, emby, Emby
-
-# Orange 公益服
-HOST, emby.52.al, Emby
+DOMAIN-KEYWORD, emby, Emby
 
 # CC公益
-HOST, cc.ccemby.tk, Emby
+DOMAIN-SUFFIX, ccemby.tk, Emby
 
 # 卷毛鼠
-HOST-KEYWORD, jmsooo.com, Emby
+DOMAIN-SUFFIX, jmsooo.com, Emby
 
 # 终点
-HOST, emby.wtf, Emby
-
-# embyclub
-HOST, emby.kim, Emby
+DOMAIN-SUFFIX, emby.wtf, Emby
 
 # Misty
-HOST-KEYWORD, aaa.ax, Emby
-
-# 品云
-HOST, embyplus.club, Emby
+DOMAIN-SUFFIX, misty.ltd, Emby
 
 # misakaf
-HOST-KEYWORD, cf.misakaf.org, Emby
+DOMAIN-SUFFIX, misakaf.org, Emby
 
-# Texon
-Host, emby.texon.one, Emby
-
-# Terminus
-HOST, emby.wtf, Emby
+# TreeDiagram
+DOMAIN-SUFFIX, 123456.al, Emby
 
 # PeachEmby
-HOST-KEYWORD, embymv.tk, Emby
-
-# Polo
-HOST, poloemby.xyz, Emby
+DOMAIN-SUFFIX, embymv.tk, Emby
 
 #二次元
-HOST-KEYWORD, nijigem.by, Emby
+DOMAIN-SUFFIX, nijigem.by, Emby
 
-#Catfish
-HOST, catfishemby.club, Emby
+#纸片人
+DOMAIN-SUFFIX, embyplus.org, Emby
 
-#Bluesea
-HOST-KEYWORD, blueseacdn.com, Emby
-HOST, bsem.ddns.me, Emby
+#pilipili
+DOMAIN-SUFFIX, emby77.org, Emby
+
+#ody
+DOMAIN-SUFFIX, odysseyplus.site, Emby
+
+#hxd
+DOMAIN-SUFFIX, bili.rip, Emby
+
+#Nebula
+DOMAIN-SUFFIX, nebula-emby.com, Emby
+
+#Studyfun
+DOMAIN-SUFFIX, studyfun.live, Emby
+
+
+
+
+
+
+
+
+
+
 
 
 
