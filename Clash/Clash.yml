@@ -7,7 +7,6 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: info
-#external-controller: 127.0.0.1:9090 #设置外部控制器的地址和端口，用于远程管理代理服务，我这里默认不设置
 profile:
   store-selected: false
   tracing: false
@@ -274,8 +273,8 @@ rule-providers:
   OpenAI_rule:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/limbopro/Profiles4limbo/26e644ae56513bdaeffea364fe19e0158f37fc37/AI_Platforms.list"
-    path: ./RuleSet/OpenAI.yaml
+    url: "https://raw.githubusercontent.com/Cypic/Proxy/main/rule/clash/Openai.yaml"
+    path: ./RuleSet/Openai.yaml
     interval: 86400
 
   #GitHub
