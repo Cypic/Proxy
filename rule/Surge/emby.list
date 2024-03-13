@@ -1,48 +1,30 @@
 # NAME: Emby
 # 关键字匹配
-DOMAIN-KEYWORD, emby, Emby
-
-# CC公益
-DOMAIN-SUFFIX, ccemby.tk, Emby
+DOMAIN-KEYWORD, emby
 
 # 卷毛鼠
-DOMAIN-SUFFIX, jmsooo.com, Emby
+DOMAIN-SUFFIX, jmsooo.com
 
 # 终点
-DOMAIN-SUFFIX, emby.wtf, Emby
-
-# Misty
-DOMAIN-SUFFIX, misty.ltd, Emby
-
-# misakaf
-DOMAIN-SUFFIX, misakaf.org, Emby
+DOMAIN-SUFFIX, emby.wtf
 
 # TreeDiagram
-DOMAIN-SUFFIX, 123456.al, Emby
+DOMAIN-SUFFIX, 123456.al
 
-# PeachEmby
-DOMAIN-SUFFIX, embymv.tk, Emby
+# 二次元
+DOMAIN-SUFFIX, nijigem.by
 
-#二次元
-DOMAIN-SUFFIX, nijigem.by, Emby
+# 纸片人
+DOMAIN-SUFFIX, embyplus.org
 
-#纸片人
-DOMAIN-SUFFIX, embyplus.org, Emby
+# pilipili
+DOMAIN-SUFFIX, pilipiliultra.top
 
-#pilipili
-DOMAIN-SUFFIX, emby77.org, Emby
+# ody
+DOMAIN-SUFFIX, odysseyplus.site
 
-#ody
-DOMAIN-SUFFIX, odysseyplus.site, Emby
-
-#hxd
-DOMAIN-SUFFIX, bili.rip, Emby
-
-#Nebula
-DOMAIN-SUFFIX, nebula-emby.com, Emby
-
-#Studyfun
-DOMAIN-SUFFIX, studyfun.live, Emby
+# 不给看
+DOMAIN-SUFFIX, emby.pro
 
 
 
