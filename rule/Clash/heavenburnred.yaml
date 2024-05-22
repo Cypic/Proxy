@@ -1,0 +1,10 @@
+# NAME: HeavenBurnRed
+# DOMAIN: 2
+# DOMAIN-SUFFIX: 3
+# TOTAL: 5
+payload:
+  - DOMAIN,app.adjust.com
+  - DOMAIN,app-measurement.com
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN-SUFFIX,gree-apps.net
+  - DOMAIN-SUFFIX,heaven-burns-red.wfs.games

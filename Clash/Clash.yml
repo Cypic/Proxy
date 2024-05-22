@@ -57,6 +57,16 @@ proxy-providers:
       enable: true
       interval: 21600
       url: http://cp.cloudflare.com/generate_204
+  
+  ClashElse: 
+    type: http
+    url: https://substore.com/download/collection/Surge?target=Clash
+    path: ./claelse.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 21600
+      url: http://cp.cloudflare.com/generate_204
 
 proxy-groups:
   - name: PROXY
@@ -98,7 +108,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - DIRECT
       - HongKong
       - TaiWan
       - Japan
@@ -180,6 +189,15 @@ proxy-groups:
     proxies:
     use:
       - Clash
+  
+  - name: Else
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    lazy: true
+    proxies:
+    use:
+      - ClashElse
 
 rule-providers:
   #本地
@@ -210,21 +228,21 @@ rule-providers:
     type: http
     behavior: classical
     url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
-    path: ./RuleSet/YouTube.yaml
+    path: ./RuleSet/Steam.yaml
     interval: 86400	
 
   Epic_rule:
     type: http
     behavior: classical
     url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
-    path: ./RuleSet/YouTube.yaml
+    path: ./RuleSet/Epic.yaml
     interval: 86400	  
 
   Sony_rule:
     type: http
     behavior: classical
     url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.yaml"
-    path: ./RuleSet/YouTube.yaml
+    path: ./RuleSet/Sony.yaml
     interval: 86400	
 
   #流媒体
@@ -261,24 +279,51 @@ rule-providers:
     type: http
     behavior: classical
     url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
-    path: ./RuleSet/OpenAI.yaml
+    path: ./RuleSet/Github.yaml
     interval: 86400
 
+  #TelgrameUS
+  TelegramUS_rule:
+    type: http
+    behavior: classical
+    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramUS/TelegramUS.yaml"
+    path: ./RuleSet/telgrameUS.yaml
+    interval: 86400
+  
+  #Telgrame
+  TelegramSG_rule:
+    type: http
+    behavior: classical
+    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramSG/TelegramSG.yaml"
+    path: ./RuleSet/telgrameSG.yaml
+    interval: 86400
+  
+  #TelgrameNL
+  TelegramNL_rule:
+    type: http
+    behavior: classical
+    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramNL/TelegramNL.yaml"
+    path: ./RuleSet/telgrameNL.yaml
+    interval: 86400
+  #Telgrame
   Telegram_rule:
     type: http
     behavior: classical
     url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
-    path: ./RuleSet/OpenAI.yaml
+    path: ./RuleSet/telgrame.yaml
     interval: 86400
   
 rules:
   - PROCESS-NAME,qbittorrent.exe,DIRECT
+  - PROCESS-NAME,HeavenBurnsRed.exe,ntRRR
   - IP-CIDR,155.248.184.234/32,DIRECT
   - IP-CIDR,45.82.120.209/32,DIRECT
   - IP-CIDR,192.166.114.184/32,DIRECT
   - IP-CIDR,192.145.46.33/32,DIRECT
   - DOMAIN-KEYWORD,Netflix,Netflix
-  - RULE-SET,Telegram_rule,Singapore
+  - RULE-SET,TelegramUS_rule,United States
+  - RULE-SET,TelegramSG_rule,Singapore
+  - RULE-SET,TelegramNL_rule,Else
   - RULE-SET,Netflix_rule,Netflix
   - RULE-SET,YouTube_rule,Youtube
   - RULE-SET,Steam_rule,Game
