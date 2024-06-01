@@ -47,10 +47,10 @@ proxies:
 - name: US CC 
 
 
-proxy-providers:
+proxy-providers: 
   Clash: 
     type: http
-    url: https://substore.com/download/collection/Surge?target=Clash
+    url: https://sub.adol.one/vmr1jkh!tzn3YQN9whq/download/collection/Surge?target=ClashMeta
     path: ./cla.yaml
     interval: 86400
     health-check:
@@ -58,9 +58,20 @@ proxy-providers:
       interval: 21600
       url: http://cp.cloudflare.com/generate_204
   
+  ClashntRRR: 
+    type: http
+    url: https://sub.adol.one/vmr1jkh!tzn3YQN9whq/download/ntRRR_Hy2?target=ClashMeta
+    path: ./clantr.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      interval: 21600
+      url: http://cp.cloudflare.com/generate_204
+
+  
   ClashElse: 
     type: http
-    url: https://substore.com/download/collection/Surge?target=Clash
+    url: https://sub.adol.one/vmr1jkh!tzn3YQN9whq/download/collection/Useless?target=ClashMeta
     path: ./claelse.yaml
     interval: 86400
     health-check:
@@ -88,10 +99,9 @@ proxy-groups:
     interval: 60
     lazy: true
     proxies:
-      - JP Oracle
-      - JP GC
-      - US CC
-  
+    use:
+      - ClashntRRR
+
   - name: Netflix
     type: select
     url: http://www.gstatic.com/generate_204
@@ -204,7 +214,7 @@ rule-providers:
   Lan_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
     path: ./RuleSet/Lan.yaml
     interval: 86400
 
@@ -212,14 +222,14 @@ rule-providers:
   Download_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
     path: ./RuleSet/Download.yaml
     interval: 86400
   
   PTtracker_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml"
     path: ./RuleSet/Pttracker.yaml
     interval: 86400
 
@@ -227,50 +237,57 @@ rule-providers:
   Steam_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
     path: ./RuleSet/Steam.yaml
     interval: 86400	
 
   Epic_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
     path: ./RuleSet/Epic.yaml
     interval: 86400	  
 
   Sony_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.yaml"
     path: ./RuleSet/Sony.yaml
-    interval: 86400	
+    interval: 86400
+
+  Heavenburnred_rule:
+    type: http
+    behavior: classical
+    url: "https://raw.gitmirror.com/Cypic/Proxy/main/rule/Clash/heavenburnred.yaml"
+    path: ./RuleSet/Heavenburnred.yaml
+    interval: 86400
 
   #流媒体
   YouTube_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
     path: ./RuleSet/YouTube.yaml
     interval: 86400
 
   Netflix_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     path: ./RuleSet/Netflix.yaml
     interval: 86400
 
   Bilibili_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./RuleSet/Bilibili.yaml
     interval: 86400
   
   OpenAI_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat//blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    url: "https://raw.gitmirror.com//blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     path: ./RuleSet/Openai.yaml
     interval: 86400
 
@@ -278,7 +295,7 @@ rule-providers:
   GitHub_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     path: ./RuleSet/Github.yaml
     interval: 86400
 
@@ -286,7 +303,7 @@ rule-providers:
   TelegramUS_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramUS/TelegramUS.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramUS/TelegramUS.yaml"
     path: ./RuleSet/telgrameUS.yaml
     interval: 86400
   
@@ -294,7 +311,7 @@ rule-providers:
   TelegramSG_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramSG/TelegramSG.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramSG/TelegramSG.yaml"
     path: ./RuleSet/telgrameSG.yaml
     interval: 86400
   
@@ -302,31 +319,32 @@ rule-providers:
   TelegramNL_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramNL/TelegramNL.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramNL/TelegramNL.yaml"
     path: ./RuleSet/telgrameNL.yaml
     interval: 86400
   #Telgrame
   Telegram_rule:
     type: http
     behavior: classical
-    url: "https://raw.tuu.cat/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    url: "https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     path: ./RuleSet/telgrame.yaml
     interval: 86400
   
 rules:
   - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,HeavenBurnsRed.exe,ntRRR
   - IP-CIDR,155.248.184.234/32,DIRECT
   - IP-CIDR,45.82.120.209/32,DIRECT
   - IP-CIDR,192.166.114.184/32,DIRECT
   - IP-CIDR,192.145.46.33/32,DIRECT
-  - DOMAIN-KEYWORD,Netflix,Netflix
+  - RULE-SET,Download_rule,DIRECT
   - RULE-SET,TelegramUS_rule,United States
   - RULE-SET,TelegramSG_rule,Singapore
   - RULE-SET,TelegramNL_rule,Else
   - RULE-SET,Netflix_rule,Netflix
   - RULE-SET,YouTube_rule,Youtube
   - RULE-SET,Steam_rule,Game
+  - RULE-SET,Bilibili_rule,Bilibili  
+  - RULE-SET,Heavenburnred_rule,ntRRR
   - RULE-SET,Epic_rule,Game
   - RULE-SET,Sony_rule,Game
   - RULE-SET,PTtracker_rule,PTtracker
